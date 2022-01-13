@@ -1,0 +1,133 @@
+Link
+    https://github.com/CoreyMSchafer/code_snippets/tree/master/Django_Blog
+    https://www.youtube.com/watch?v=MmZTZb7bcwc&t=57s
+    https://www.youtube.com/watch?v=Wfu5dPbiyKA&t=547s      create project vsc
+    https://code.visualstudio.com/docs             
+    https://support.google.com/chrome/answer/157179?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Ctab-and-window-shortcuts     Chrome keyboard shortcuts   
+    https://docs.microsoft.com/en-us/visualstudio/ide/class-view-and-object-browser-icons?view=vs-2022                      icon      
+
+Code snippets : 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+
+vsc
+    add Extensions
+        Python, Docker, Jupter, Pylance, Vetru, json, sublime text
+        
+        Color Themes.. > Dark (visual studio) / 
+
+    create the workspace
+        add folder to workspace     > project noName
+        save workspace as           > project name
+            {}IndigoProject.code-workspace
+
+    DB Browser for SQLite - Standard installer for 64-bit Windows
+
+build env 
+    pip install virtualenv
+    python -m venv env  
+
+    Open the Command Palette. Then select the 'Python: Select Interpreter'  
+    and select the virtual environment in your project folder that starts with ./venv or .\env:
+ 
+    pip install --upgrade pip 
+
+    this is need first time run on admin mode
+    **  error File C:\xo\IndigoProject\venv\Scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system. (run on admin)
+    ?   Get-ExecutionPolicy                     < on terminal
+    ?   Set-ExecutionPolicy Unrestrict          < on terminal
+
+    .\env\scripts\activate    (act env on ahell)   or command palette  > select interpreter python (venv:venv)       > exit
+
+    (env)  
+        pip install --upgrade pip     
+        pip install django      
+            change VSC add configuratrion > select Djago ... then crate launch.json file  
+
+        django-admin            < can see django-admin subcommand
+        django-admin startproject Indigo
+        python .\indigo\manage.py runserver          stop > ctl + c 
+
+        python manage.py startapp blog              +2 
+
+        https://getbootstrap.com/docs/5.1/getting-started/introduction/  copy to base.html      +3
+        add static\blog main.css  add main 
+            <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+
+        db 
+        python manage.py migrate
+        python manage.py createsuperuser            < add new user Admin app*, user1, user2     +4
+        
+        update models.py 
+        python manage.py makemigrations             < create the Post table  0001_initial.py
+        python manage.py sqlmigrate blog 0001
+        python manage.py migrate
+
+        python manage.py shell
+        run shUser.py shell command             +5  add user1, user2..
+
+        python manage.py startapp users         +6  create the userCreateForm
+        pip install django-crispy-forms         add nice bootstrapt style forms ... add settings.py 'crispy_forms'
+
+        execfile('xx.py')               x
+        python manage.py shell < xx.py  x
+
+        pip install pillow                      +8
+        edit users model.py
+     
+        waring
+            You have 3 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): auth.
+            Run 'python manage.py migrate' to apply them.
+
+        python manage.py showmigrations --list
+        python manage.py migrate --plan         You can see a list of just the unapplied migrations 
+
+        delete create db again
+        python manage.py makemigrations
+        python manage.py migrate
+        python manage.py createsuperuser
+        
+
+   
+
+
+
+
+pip  
+    PS C:\xo\IndigoProject> pip list
+    Package    Version
+    ---------- -------
+    pip        21.2.4
+    setuptools 58.1.0
+
+    Package                           Version   < virtualenv
+    --------------------------------- -------
+    backports.entry-points-selectable 1.1.1
+    distlib                           0.3.4
+    filelock                          3.4.0
+    pip                               21.2.4
+    platformdirs                      2.4.0
+    setuptools                        58.1.0
+    six                               1.16.0
+    virtualenv                        20.10.0
+
+launch.json
+    {
+        // Use IntelliSense to learn about possible attributes.
+        // Hover to view descriptions of existing attributes.
+        // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+        "version": "0.2.0",
+        "configurations": [
+                    
+            {
+                "name": "Python: Django",
+                "type": "python",
+                "request": "launch",
+                "program": "${workspaceFolder}\\Indigo\\manage.py",
+                "args": [
+                    "runserver"
+                ],
+                "django": true
+            },
+
+        ]
+    }    
