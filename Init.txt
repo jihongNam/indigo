@@ -5,8 +5,9 @@ Link
     https://code.visualstudio.com/docs             
     https://support.google.com/chrome/answer/157179?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Ctab-and-window-shortcuts     Chrome keyboard shortcuts   
     https://docs.microsoft.com/en-us/visualstudio/ide/class-view-and-object-browser-icons?view=vs-2022                      icon      
+    https://github.com/python-engineer/python-engineer-notebooks/tree/master/advanced-python                                advanced python
 
-Code snippets : 1, 2, 3, 4, 5, 6, 7, 8, 9
+Code snippets : 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12x
 
 
 vsc
