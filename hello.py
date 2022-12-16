@@ -1,3 +1,5 @@
+import sys
 print ('hello project ...')
-x = 'xxxx'
+
+x = sys.version
 print(f'add this for {x}')

@@ -1,5 +1,5 @@
-강의 1탄 : https://youtu.be/lelVripbt2M
-강의 2탄 : https://youtu.be/cwC8t9dno2s
+강의 1 : https://youtu.be/lelVripbt2M
+강의 2 : https://youtu.be/cwC8t9dno2s
 
 Git 설치 & 환경설정 
   Git 설치하기 : https://git-scm.com/
@@ -15,6 +15,7 @@ git bash 에서 환경설정 하기
 
   Step 3 : 정보 확인하기
   git config --list
+  (END)  > 'q'
 
 
 Github에 처음 코드 업로드하기  < this is on Visual Studio Code on terminal > git bash 
